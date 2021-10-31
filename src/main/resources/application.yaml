@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/auth/realms/dev/protocol/openid-connect/certs
+
+server:
+  port: 8763
+
+# Enable this for debugging
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
